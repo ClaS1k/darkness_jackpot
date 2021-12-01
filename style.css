@@ -1,0 +1,273 @@
+@font-face {
+	font-family: 'airborne';
+	src: url(arbrnplt.ttf);
+}
+
+@font-face {
+	font-family: 'customFont1';
+	src: url(jackpot.otf);
+}
+@font-face {
+	font-family: 'customFont2';
+	src: url(logo_two.otf);
+}
+@font-face {
+	font-family: 'customFont3';
+	src: url(prize.ttf);
+}
+
+
+*{
+    margin:0;
+}
+
+header{
+    width:550px;
+    height:120px;
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left:-275px;
+}
+
+.header_border{
+    width:100%;
+    height:70px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.background{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-500;
+    filter: blur(6px) brightness(60%);
+}
+
+.logo{
+    width:180px;
+    height:120px;
+    position:absolute;
+    top:-28px;
+    left:25px;
+}
+
+.companyHeader{
+    margin-top:15px;
+    margin-left:110px;
+    font-family:customFont2;
+    font-size:30px;
+    letter-spacing:4px;
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(255, 5, 523, 1),  0 0 20px rgba(10, 175, 230, 0);
+}
+
+.content{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background:rgba(0, 0, 0, 0.35);
+}
+
+.jackpot_header{
+    margin-top:135px;
+    font-family:customFont3;
+    font-size:135px;
+    color: #daf6ff;
+    text-shadow: 0 0 15px rgba(255, 5, 523, 1),  0 0 15px rgba(10, 175, 230, 0);
+    letter-spacing: 6px;
+    font-weight: 400;
+}
+
+.jackpot_summa{
+    margin-top:30px;
+    font-family:customFont1;
+    font-size:150px;
+    color:white;
+    font-weight:bold;
+    display:none;
+}
+
+.jackpot_star{
+    width:400px;
+    height:250px;
+    position:absolute;
+    top:100px;
+    left:50%;
+    margin-left:-200px;
+    z-index:-500;
+}
+
+.jackpot_container{
+    width:650px;
+    height:200px;
+    position:absolute;
+    top:315px;
+    left:50%;
+    margin-top:30px;
+    font-family: customFont3, monospace;
+    color: #ffffff;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(255, 5, 523, 1),  0 0 20px rgba(10, 175, 230, 0);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.time {
+    letter-spacing: 0.05em;
+    font-size: 80px;
+    padding: 5px 0;
+}
+
+.clock {
+  height: 20vh;
+  width: 8ch;
+  color: white;
+  font-size: 20vh;
+  font-family: customFont3, monospace;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 5, 523, 1),  0 0 20px rgba(10, 175, 230, 0);
+  line-height: 20.4vh;
+  display: flex;
+  position:absolute;
+    top:265px;
+    left:calc( 50% - 4ch );
+    margin-top:30px;
+  overflow: hidden;
+  border:1px groove black;
+  border-radius:25px;
+  box-shadow: 0 0 40px rgba(255, 5, 523, 1);
+}
+
+.hours{
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.3);
+}
+
+.first{
+    width:13%;
+    height:100%; 
+    position:absolute;
+    top:10px;
+    left:1%;
+   /* border-right:1px groove black; */
+}
+
+.second{
+    width:13%;
+    height:100%; 
+    position:absolute;
+    top:10px;
+    left:15%;
+
+   /* border-right:1px groove black; */
+}
+
+.third{
+    width:13%;
+    height:100%; 
+    position:absolute;
+    top:10px;
+    left:29%;
+
+   /* border-right:1px groove black; */
+}
+
+.fourth{
+    width:13%;
+    height:100%; 
+    position:absolute;
+    top:10px;
+    left:42%;
+
+   /* border-right:1px groove black; */
+}
+
+.fifth{
+    width:13%;
+    height:100%; 
+    position:absolute;
+    top:10px;
+    left:56%;
+
+   /* border-right:1px groove black; */
+}
+
+.sixth{
+    width:13%;
+    height:100%; 
+    position:absolute;
+    top:10px;
+    left:70%;
+    /* border-right:1px groove black; */
+}
+
+.seventh{
+    width:13%;
+    height:100%; 
+    position:absolute;
+    top:10px;
+    left:85%;
+}
+
+.number{
+    text-align:center;
+    margin-left:-15px;
+}
+
+.clock::before, .clock::after {
+  content: '';
+  background: linear-gradient(to top, transparent, black);
+  position: absolute;
+  z-index: 2;
+}
+
+.clock::after {
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, black);
+}
+
+.clock > div {
+  display: flex;
+}
+
+.tick {
+  line-height: 17vh;
+}
+
+.tick-hidden {
+  opacity: 0;
+}
+
+.move {
+  animation: move linear 1s infinite;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0vh);
+  }
+  to {
+    transform: translateY(-20vh);
+  }
+}
+
+
+
+
+
+
